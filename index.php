@@ -46,11 +46,45 @@
 </div>
 
 <div class="form-group row">
+  <label for="example-search-input" class="col-4 col-form-label">Expressão:</label>
+  <div class="col-8">
+    <input class="form-control form-control-sm" type="search"  id="expresao" placeholder="Forme o termo de pesquisa nesse sentido /expresão/">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="example-search-input" class="col-4">Case insentive:</label>
+
+  <div class="form-check col-1">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-search-input" class="col-4">Copiar arquivos com ocorrencias:</label>
+
+  <div class="form-check col-1">
+      <input class="form-check-input" type="checkbox" id="gridCheckcopia">
+  </div>
+</div>
+
+ <!--  <div class="form-group">
+  <label class="form-check-label" for="gridCheck">
+       Case insentive:
+      </label>
+    <div class="form-check">
+
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+
+    </div>
+  </div> -->
+
+<div class="form-group row">
   <label for="example-search-input" class="col-4 col-form-label"></label>
   <div class="col-6">
    <button type="submit" class="btn btn-primary   col-6 form-control-sm  " onclick="enviar();">Procurar</button>
   </div>
 </div>
+
 
 </div>
 </div>
@@ -60,7 +94,7 @@
 <script type="text/javascript">
   
 function  enviar(){
-    location.href="script.php?Pasta="+document.getElementById("pasta").value+"&Palavra="+document.getElementById('palavra').value;
+    location.href="script.php?Pasta="+document.getElementById("pasta").value+"&Palavra="+document.getElementById('palavra').value+"&Expressao="+document.getElementById("expresao").value+"&sensintive="+document.getElementById('gridCheck').checked+"&Copy="+document.getElementById('gridCheckcopia').checked;
 
   }
 </script>
