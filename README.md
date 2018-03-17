@@ -8,7 +8,7 @@ na pasta  `arquivos` e instalar a Classe `ZipArchive` ```php sudo apt-get instal
 ## Como usar
 
 Basta por o caminho da pasta no campo `Pasta a ser procurada:` e o nome|palavra|padrão que deseja
-encontra no arquivo ou arquivo.
+encontra na Pasta ou arquivo.
 Em `Expressão:` é possivel fazer um expressão regular para procura de padroes, exemplo: `/[0-9]/`.Tambem é possivel realizar diff
 da seguinte forma: Ir em diff por arquivo ou pasta inteira em `Pasta ou arquivo ser procurada 001:` e `Pasta ou arquivo ser procurada 002:`
 escolher se vai ser um arquivo ou diretorio inteiro se for arquivo necessario por o diretorio completo do arquivo.
