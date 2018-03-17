@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Realizar diff</title>
+ <link rel="stylesheet" href="bootstrap-4.0.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+ -->
+
+<header>
+	
+
+</header>
+<div style="margin-top: 20px" class="container" >
+
+
+<div class="box col-12">
+
+
+<div class="form-group row">
+  <label for="example-text-input" class=" col-5 col-form-label">Pasta ou arquivo ser procurada 001:</label>
+  <div class="col-5">
+  <input class="form-control form-control-sm" type="text"  id="pasta1">
+</div>
+</div> 
+
+<div class="form-group row">
+  <label for="example-text-input" class=" col-5 col-form-label">Pasta ou arquivo ser procurada 002:</label>
+  <div class="col-5">
+  <input class="form-control form-control-sm" type="text"  id="pasta2">
+</div>
+</div>
+
+
+<div class="form-group row">
+  <label for="example-search-input" class="col-5">Procurar em:</label>
+<div class="col-5">
+  Pasta  <input type="radio" style="margin-left:5px;margin-right: 5px;" id="button" name="gender" value="pasta">
+  Unico arquivo <input type="radio" style="margin-left:5px"             id="button2" name="gender" value="arquivo">
+</div>
+</div>
+
+
+<div class="form-group row">
+<label for="example-search-input" class="col-5"></label>
+    <div class="col-sm-7">
+      <button type="button" class="btn btn-primary" onclick="enviar() " >Processar</button>
+          
+    </div
+
+   </div>
+</div>
+
+<script type="text/javascript">
+	function enviar(){
+
+      var tipo=document.getElementsByName("gender");
+      var tipoarq="";
+       for (var i = 0; i < tipo.length; i++) {
+        if (tipo[i].checked) {
+            tipoarq=tipo[i].value;
+        }
+    }
+
+    location.href="gerardiff.php?tipoarquivo="+tipoarq+"&pastaouarquivo1="+document.getElementById("pasta1").value+"&pastaouarquivo2="+document.getElementById('pasta2').value;
+ }
+
+
+
+</script>
+

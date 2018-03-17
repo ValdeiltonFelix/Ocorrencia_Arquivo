@@ -4,97 +4,96 @@
   <title>Procurar palavras em arquivos</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="bootstrap-4.0.0/dist/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script  src="bootstrap-4.0.0/dist/js/jquery-3.3.1.min.js"> </script> -->
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="bootstrap-4.0.0/dist/css/bootstrap.min.css">
+ <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> -->
+  <script  src="bootstrap-4.0.0/dist/js/jquery-3.3.1.min.js"> </script>
+  <script src="./bootstrap-4.0.0/assets/js/vendor/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
-<style type="text/css">
-      body {
-        margin: 0px
-    }
-    .container {
-        width: 50vw;
-        height: 50vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center
-    }
-    .box {
-        width: 950px;
-        height: 300px;
-        background: #fff;
-    }
-
-</style>
 <body>
-<div style=" margin-top: 20px; text-align:center; margin-left: 2px; ">
- <h1 >Palavra a ser procurada em um arquivo.</h1>
+<!-- Nav tabs -->
 
-<div style="" class="container" >
-   <div class="box">
+<div class="container">
+      <div class="row">
+          <div class="col-md-10">
+              
+         
+         <div class="container">
 
-   <div class="form-group row">
-  <label for="example-text-input" class=" col-4 col-form-label">Pasta a ser procurada:</label>
-  <div class="col-8">
-    <input class="form-control form-control-sm" type="text"  id="pasta">
-  </div>
+           <br>
+           <!-- Nav tabs -->
+           <ul class="nav nav-tabs" role="tablist">
+             <li class="nav-item">
+               <a class="nav-link active" data-toggle="tab" href="#home">Procura correspondencia</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" data-toggle="tab" href="#menu1">Relalizar diff</a>
+             </li>
+           </ul>
+
+           <!-- Tab panes -->
+           <fieldset>
+           <div class="tab-content">
+             <div id="home" class="container tab-pane active">
+             <div style=" margin-top: 20px; margin-left:250px; text-align: center;"> <font  size="6" face="Times">Palavra a ser procurada em um arquivo. </font></div> 
+               <?php include("script001.php");?>
+             </div>
+             <div id="menu1" class="container tab-pane fade"><br>
+
+            <div style=" margin-top: 20px; margin-left:250px; text-align: center;"> <font  size="6" face="Times">Procurar diferença entre arquivos</font></div>
+               <?php include("diff.html");?>
+             </div>
+           </div>
+           </fieldset>
+         </div>
+                
+            
+          </div>
+
+
+     </div>
+
+<!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
+  </li>
+</ul> -->
+<!-- 
+<div class="tab-content">
+  <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">.1..</div>
+  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">.2..</div>
+  <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">.3..</div>
+  <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">.4..</div>
+</div> -->
+
 </div>
-<div class="form-group row">
-  <label for="example-search-input" class="col-4 col-form-label">Palavra a ser procurada:</label>
-  <div class="col-8">
-    <input class="form-control form-control-sm" type="search"  id="palavra" placeholder="Se houver mais de uma palavra separar por virgula">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="example-search-input" class="col-4 col-form-label">Expressão:</label>
-  <div class="col-8">
-    <input class="form-control form-control-sm" type="search"  id="expresao" placeholder="Forme o termo de pesquisa nesse sentido /expresão/">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="example-search-input" class="col-4">Case insentive:</label>
-
-  <div class="form-check col-1">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-search-input" class="col-4">Copiar arquivos com ocorrencias:</label>
-
-  <div class="form-check col-1">
-      <input class="form-check-input" type="checkbox" id="gridCheckcopia">
-  </div>
-</div>
-
- <!--  <div class="form-group">
-  <label class="form-check-label" for="gridCheck">
-       Case insentive:
-      </label>
-    <div class="form-check">
-
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-
-    </div>
-  </div> -->
-
-<div class="form-group row">
-  <label for="example-search-input" class="col-4 col-form-label"></label>
-  <div class="col-6">
-   <button type="submit" class="btn btn-primary   col-6 form-control-sm  " onclick="enviar();">Procurar</button>
-  </div>
-</div>
-
-
-</div>
-</div>
- </div>
 </body>
 </html>
-<script type="text/javascript">
-  
-function  enviar(){
-    location.href="script.php?Pasta="+document.getElementById("pasta").value+"&Palavra="+document.getElementById('palavra').value+"&Expressao="+document.getElementById("expresao").value+"&sensintive="+document.getElementById('gridCheck').checked+"&Copy="+document.getElementById('gridCheckcopia').checked;
 
-  }
+<script type="text/javascript">
+
+$(document).ready(function(){
+    $("p").click(function(){
+        alert("The paragraph was clicked.");
+    });
+});
+
+
 </script>
