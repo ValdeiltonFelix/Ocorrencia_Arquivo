@@ -3,7 +3,7 @@ Projeto tem como objetivo procurar ocorrência de uma palavra em um arquivo recu
 
 ## Configuração 
 Necessário ter instalado o `PHP 7.0.0 >=` e apache2 `Server version: Apache/2.4.18 (Ubuntu)`,dar permição de leitura e escrita 
-na pasta  `arquivos` e instalar a Classe `ZipArchive` ```php sudo apt-get install php7.1-zip```
+na pasta  `arquivos` e instalar a Classe `ZipArchive` ```php sudo apt-get install php7.1-zip```. Se na maquina não estiver instalado a mbstring e necessário instalar ``sudo apt install php7.0-mbstring``
 
 ## Como usar
 
